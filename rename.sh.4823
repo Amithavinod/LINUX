@@ -1,0 +1,14 @@
+if [ $# -ne 0 ]
+then
+echo "syntax is $0 "
+exit 1
+fi
+for i in *
+do
+if [ -f $1 ]
+then
+newname="$i.$$"
+mv $i $newname
+fi
+done
+
